@@ -3,11 +3,151 @@
 @import "normalize";
 @import "layout";
 
-/* Components */
-@import "components/form_field";
+$color-dark: #191919;
+$color-light: #282828;
+$color-main: #818181;
+$color-background: #f5f5f2;
+$color-warning: #f6b93b;
+$color-danger: #e55039;
+$color-success: #78e08f;
 
-/* Sections */
-@import "section/registration_form";
+$font-main: 'Roboto', sans-serif;
 
-/* Pages / Views */
-@import "pages/registration";
+$font-light: 300;
+$font-normal: 400;
+$font-semibold: 500;
+$font-bold: 700;
+
+h1 {
+  font-family: $font-main;
+  font-size: 16px;
+  font-weight: $font-semibold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: $font-bold;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: $font-bold;
+}
+
+
+// /* Components */
+// @import "components/form_field";
+
+// /* Sections */
+// @import "section/registration_form";
+
+// /* Pages / Views */
+// @import "pages/registration";
+
+body {
+  background: $color-background;
+}
+
+section {
+  padding: 18px;
+  margin-left: 188px;
+}
+
+.container {
+  // max-width: 12800px;
+  padding: 0 20px;
+  background: #ffffff;
+}
+
+.sidenav {
+  height: 100%;
+  width: 188px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $color-dark;
+  overflow-x: hidden;
+  padding-top: 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidenav span img {
+  padding: 18px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: $color-main;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #ffffff;
+  background-color: #262626;
+}
+
+.sidenav h1 {
+  color: #ffffff;
+}
+
+.navbar {
+  background: #ffffff;
+  padding: 12px 0;
+  margin-left: 188px;
+  text-align: right;
+}
+
+.navbar ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-right: 36px;
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: &$color-main;
+}
+
+.page-header {
+  margin: 0;
+  line-height: 2;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+
+.date-range {
+  font-family: $font-main;
+  font-weight: $font-semibold;
+  color: $color-main;
+  border: solid 1px;
+  border-color: $color-main;
+  width: fit-content;
+}
+
+.date {
+  margin-right: 30px;
+  border-right: solid 1px;
+  border-color: $color-main;
+  padding: 8px;
+}
+
