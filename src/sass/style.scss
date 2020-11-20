@@ -64,9 +64,13 @@ section {
 
 .container {
   // max-width: 12800px;
-  padding: 0 20px;
   background: #ffffff;
   text-align: center;
+}
+
+hr {
+  margin: 0;
+  border-top: 1px solid $color-light;
 }
 
 .sidenav {
@@ -86,46 +90,91 @@ section {
   justify-content: space-between;
 }
 
-.sidenav span img {
+.logo i {
+  color: $color-main;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidenav span {
   padding: 18px;
 }
 
+.sidenav i {
+  padding: 0 10px;
+}
+
 .sidenav a {
-  padding: 6px 6px 6px 32px;
+  padding: 12px;
   text-decoration: none;
   font-size: 25px;
   color: $color-main;
   display: block;
   font-family: $font-main;
   font-size: 14px;
+  border-left: 3px solid transparent;
 }
 
 .sidenav a:hover {
   color: #ffffff;
   background-color: #262626;
+  border-color: $color-warning;
 }
 
 .sidenav h1 {
-  color: #ffffff;
+  color: $color-main;
+}
+
+.sidenav hr {
+  margin: 30px 0;
+}
+
+.menago {
+  color: $color-main;
+  line-height: 1.5;
+  display: flex;
+  cursor: pointer;
+}
+
+.menago img {
+  height: fit-content;
+  size: 20px;
+}
+
+.menago p {
+  padding: 0 10px;
+  color: #56819f;
+}
+
+.fa-link {
+  transform: rotate(45deg);
 }
 
 .navbar {
   background: #ffffff;
-  padding: 12px 0;
   margin-left: 188px;
   text-align: right;
+}
+
+.navbar i {
+  padding: 0 10px;
 }
 
 .navbar ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  font-family: $font-main;
+  font-weight: $font-semibold;
+  color: $color-main;
 }
 
 .navbar ul li {
   display: inline-block;
-  margin-right: 36px;
+  padding: 12px;
   position: relative;
+  border-left: 1px solid;
+  cursor: pointer;
 }
 
 .navbar a {
@@ -135,7 +184,7 @@ section {
 
 .page-header {
   margin: 0;
-  line-height: 2;
+  padding: 15px;
 }
 
 .row {
@@ -156,14 +205,32 @@ section {
   padding: 35px 0 35px 0;
 }
 
+.date-picker {
+  display: flex;
+  justify-content: center;
+}
+
 .date-range {
+  padding: 5px 0;
+}
+
+.date-range input {
   font-family: $font-main;
   font-weight: $font-semibold;
   color: $color-main;
-  border: solid 1px;
+  border-radius: 3px;
   border-color: $color-main;
-  width: fit-content;
-  // padding: 20px 40px;
+  border-width: 0.5px;
+}
+
+.date-picker i {
+  background-color: #f58220;
+  color: #ffffff;
+  padding: 10px;
+  margin-left: 5px;
+  vertical-align: baseline;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .date {
@@ -241,10 +308,6 @@ section {
   padding: 25px;
 }
 
-.row-cell {
-  border-bottom: 1px solid;
-}
-
 .link-title, .link-address {
   flex: 45%;
   text-align: left;
@@ -253,14 +316,33 @@ section {
 .link-icons {
   flex: 10%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.links-label {
-  display: flex;
-
+.link-icons i {
+  opacity: 0;
 }
 
-.fa-link {
-  transform: rotate(45deg);
+.link-label {
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  border-bottom: 1px solid;
+}
+
+.first-label {
+  border-top: 1px solid;
+}
+
+.link-label:hover {
+  background-color: $color-background;
+}
+
+.link-label:hover .link-icons i {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.link-icons .fa-link {
+  color: #d67019;
 }

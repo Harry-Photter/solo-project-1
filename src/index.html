@@ -14,30 +14,30 @@
 <body>
   <div class="sidenav">
     <span class="logo">
-      <img src="images/logo.png">
-      <img src="icons/hamburger.png">
+      <img src="images/logo.png" alt="logo">
+      <i class="fas fa-bars"></i>
     </span>
-    <a href="#">General</a>
-    <a href="#">Details</a>
-    <a href="#">Links</a>
-    <a href="#">Banners</a>
-    <a href="#">Personal date</a>
-    <a href="#">Payout</a>
-    <a href="#">Postback</a>
+    <a href="#"><i class="far fa-star"></i>General</a>
+    <a href="#"><i class="fas fa-server"></i>Details</a>
+    <a href="#"><i class="fas fa-link"></i>Links</a>
+    <a href="#"><i class="fas fa-cubes"></i>Banners</a>
+    <a href="#"><i class="far fa-user"></i>Personal date</a>
+    <a href="#"><i class="fas fa-search-dollar"></i>Payout</a>
+    <a href="#"><i class="fas fa-undo"></i>Postback</a>
     <hr>
     <h1>Your menager</h1>
-    <div>
-      <img class="photo">
+    <div class="menago">
+      <img src="images/photo.png" class="photo" alt="portrait">
       <p>Mikhael E.</p>
     </div>
   </div>
   <header>
     <nav class="navbar">
       <ul>
-        <li><a href="#">$1,500.00</a></li>
-        <li><a href="#">notifications</a></li>
-        <li><a href="#">Leonardo Dicaprio</a></li>
-        <li><a href="#">Log Out</a></li>
+        <li><a><i class="fas fa-wallet"></i>$1,500.00 <i class="fas fa-chevron-down"></i></a></li>
+        <li><a><i class="far fa-bell"></i></a></li>
+        <li><a><i class="far fa-user-circle"></i>Leonardo Dicaprio</a></li>
+        <li><a><i class="fas fa-sign-out-alt"></i></a></li>
       </ul>
     </nav>
   </header>
@@ -47,10 +47,12 @@
         <h1 class="page-header">General Statistic</h1>
       </div>
       <hr>
-      <div class="row date-range">
-          <div class="date">17.11.2020</div>
-          <div class="date">17.11.2020</div>
-          <div class="icon">refresh</div>
+      <div class="row date-picker">
+        <div class="date-range">
+          <input type="date" value="2017-06-01">
+          <input type="date" value="2017-06-01">
+        </div>
+        <i class="fas fa-redo"></i>
       </div>
       <hr>
       <div class="row content">
@@ -101,65 +103,120 @@
         <div class="button">
           <a class="btn btn-1">+ add new</a>
         </div>
-        <div class="row link-label">
-          <div class="row-cell link-title">
+        <div class="row link-label first-label">
+          <div class="link-title">
             <h2>Home page</h2>
           </div>
-          <div class="row-cell link-address">
+          <div class="link-address">
             <p><a href="#">http://www.homepage.com</a></p>
           </div>
-          <div class="row-cell link-icons">
+          <div class="link-icons">
             <p><i class="fas fa-link"></i></p><p><i class="fas fa-trash-alt"></i></p>
           </div>
         </div>
-        <div class="row links-label">
-          <h2>Currently offer</h2>
-          <p><a href="#">http://www.currently.com</a></p>
-          <p><i class="fas fa-link"></i><i class="fas fa-trash-alt"></i></p>
+        <div class="row link-label">
+          <div class="link-title">
+            <h2>Currently offer</h2>
+          </div>
+          <div class="link-address">
+            <p><a href="#">http://www.currently.com</a></p>
+          </div>
+          <div class="link-icons">
+            <p><i class="fas fa-link"></i></p><p><i class="fas fa-trash-alt"></i></p>
+          </div>
         </div>
-        <div class="row links-label">
-          <h2>Blurpix</h2>
-          <p><a href="#">http://www.blurpix.com</a></p>
-          <p><i class="fas fa-link"></i><i class="fas fa-trash-alt"></i></p>
+        <div class="row link-label">
+          <div class="link-title">
+            <h2>Blurpix</h2>
+          </div>
+          <div class="link-address">
+            <p><a href="#">http://www.blurpix.com</a></p>
+          </div>
+          <div class="link-icons">
+            <p><i class="fas fa-link"></i></p><p><i class="fas fa-trash-alt"></i></p>
+          </div>
         </div>
-        <div class="row links-label">
-          <h2>Your Site</h2>
-          <p><a href="#">http://www.yoursite.com</a></p>
-          <p><i class="fas fa-link"></i><i class="fas fa-trash-alt"></i></p>
+        <div class="row link-label">
+          <div class="link-title">
+            <h2>Your Site</h2>
+          </div>
+          <div class="link-address">
+            <p><a href="#">http://www.yoursite.com</a></p>
+          </div>
+          <div class="link-icons">
+            <p><i class="fas fa-link"></i></p><p><i class="fas fa-trash-alt"></i></p>
+          </div>
         </div>
-        <div class="row links-label">
-          <h2>Google</h2>
-          <p><a href="#">http://www.google.com</a></p>
-          <p><i class="fas fa-link"></i><i class="fas fa-trash-alt"></i></p>
+        <div class="row link-label">
+          <div class="link-title">
+            <h2>Google</h2>
+          </div>
+          <div class="link-address">
+            <p><a href="#">http://www.google.com</a></p>
+          </div>
+          <div class="link-icons">
+            <p><i class="fas fa-link"></i></p><p><i class="fas fa-trash-alt"></i></p>
+          </div>
         </div>
-        <div class="row links-label">
-          <h2>Facebook</h2>
-          <p><a href="#">http://www.facebook.com</a></p>
-          <p><i class="fas fa-link"></i><i class="fas fa-trash-alt"></i></p>
+        <div class="row link-label">
+          <div class="link-title">
+            <h2>Facebook</h2>
+          </div>
+          <div class="link-address">
+            <p><a href="#">http://www.facebook.com</a></p>
+          </div>
+          <div class="link-icons">
+            <p><i class="fas fa-link"></i></p><p><i class="fas fa-trash-alt"></i></p>
+          </div>
         </div>
-        <div class="row links-label">
-          <h2>Dashboard</h2>
-          <p><a href="#">http://www.dashboard.com</a></p>
-          <p><i class="fas fa-link"></i><i class="fas fa-trash-alt"></i></p>
+        <div class="row link-label">
+          <div class="link-title">
+            <h2>Dashboard</h2>
+          </div>
+          <div class="link-address">
+            <p><a href="#">http://www.dashboard.com</a></p>
+          </div>
+          <div class="link-icons">
+            <p><i class="fas fa-link"></i></p><p><i class="fas fa-trash-alt"></i></p>
+          </div>
         </div>
-        <div class="row links-label">
-          <h2>Blurax</h2>
-          <p><a href="#">http://www.blurax.com</a></p>
-          <p><i class="fas fa-link"></i><i class="fas fa-trash-alt"></i></p>
+        <div class="row link-label">
+          <div class="link-title">
+            <h2>Blurax</h2>
+          </div>
+          <div class="link-address">
+            <p><a href="#">http://www.blurax.com</a></p>
+          </div>
+          <div class="link-icons">
+            <p><i class="fas fa-link"></i></p><p><i class="fas fa-trash-alt"></i></p>
+          </div>
         </div>
-        <div class="row links-label">
-          <h2>Piece of Wine</h2>
-          <p><a href="#">http://www.pieceofwine.com</a></p>
-          <p><i class="fas fa-link"></i><i class="fas fa-trash-alt"></i></p>
+        <div class="row link-label">
+          <div class="link-title">
+            <h2>Piece of Wine</h2>
+          </div>
+          <div class="link-address">
+            <p><a href="#">http://www.pieceofwine.com</a></p>
+          </div>
+          <div class="link-icons">
+            <p><i class="fas fa-link"></i></p><p><i class="fas fa-trash-alt"></i></p>
+          </div>
         </div>
-        <div class="row links-label">
-          <h2>Twitter</h2>
-          <p><a href="#">http://www.twitter.com</a></p>
-          <p><i class="fas fa-link"></i><i class="fas fa-trash-alt"></i></p>
+        <div class="row link-label">
+          <div class="link-title">
+            <h2>Twitter</h2>
+          </div>
+          <div class="link-address">
+            <p><a href="#">http://www.twitter.com</a></p>
+          </div>
+          <div class="link-icons">
+            <p><i class="fas fa-link"></i></p><p><i class="fas fa-trash-alt"></i></p>
+          </div>
         </div>
         <div class="button">
           <a class="btn btn-1">+ add new</a>
         </div>
+      </div>
     </div>
   </section>
 </body>
