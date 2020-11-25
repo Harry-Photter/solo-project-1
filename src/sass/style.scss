@@ -59,7 +59,6 @@ body {
 
 section {
   padding: 18px;
-  margin-left: 188px;
 }
 
 .container {
@@ -83,6 +82,7 @@ hr {
   background-color: $color-dark;
   overflow-x: hidden;
   padding-top: 0;
+  display: none;
 }
 
 .logo {
@@ -99,6 +99,55 @@ hr {
 .sidenav span {
   padding: 18px;
 }
+
+/* media queries */
+
+// @media (max-width:320px){}
+
+// hamburger-nav
+//display: block;
+// position: inherit;
+
+//nav ul
+//display: none;
+
+@media (min-width:576px){
+  .hidden-md-up {
+    display: none!important;
+  }
+
+  .navbar ul {
+    display: block!important;
+  }
+
+  .nav-hamburger {
+    position: absolute;
+  }
+}
+
+// @media (min-width:768px){}
+
+@media (min-width:1024px){
+  .sidenav {
+    display: block;
+  }
+
+  .nav-hamburger {
+    display: none;
+  }
+
+  section {
+    margin-left: 188px;
+  }
+
+  .navbar {
+    margin-left: 188px;
+  }
+}
+
+// .show {
+
+// }
 
 .sidenav i {
   padding: 0 10px;
@@ -123,6 +172,7 @@ hr {
 
 .sidenav h1 {
   color: $color-main;
+  padding: 0 12px;
 }
 
 .sidenav hr {
@@ -134,6 +184,7 @@ hr {
   line-height: 1.5;
   display: flex;
   cursor: pointer;
+  padding: 0 12px;
 }
 
 .menago img {
@@ -152,26 +203,34 @@ hr {
 
 .navbar {
   background: #ffffff;
-  margin-left: 188px;
-  text-align: right;
 }
 
 .navbar i {
   padding: 0 10px;
 }
 
+.nav-hamburger {
+  size: 1.5;
+  padding: 18px!important;
+  color: #a6a6a6;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .navbar ul {
+  text-align: right;
   padding: 0;
   margin: 0;
   list-style-type: none;
   font-family: $font-main;
   font-weight: $font-semibold;
   color: $color-main;
+  display: none;
 }
 
 .navbar ul li {
   display: inline-block;
-  padding: 12px;
+  padding: 18px;
   position: relative;
   border-left: 1px solid;
   cursor: pointer;
@@ -263,6 +322,8 @@ hr {
   margin: 0;
 }
 
+/* Buttons */
+
 .btn {
   background-color: #f58220;
   cursor: pointer;
@@ -278,35 +339,17 @@ hr {
   background-color: #d67019;
 }
 
-// .btn:hover {
-//   background-color: $color-light;
-//   color: #ffffff;
-// }
-
-// .btn-2 {
-//   background-color: #FFFFFF;
-// }
-
-// .dot-1 {
-//   color: #80bfca;
-// }
-
-// .dot-2 {
-//   color: #ff9a38;
-// }
-
-// .dot-3 {
-//   color: #59b66d;
-// }
-
 .content img {
   margin: auto;
   padding: 20px;
+  width: 100%;
 }
 
 .button {
   padding: 25px;
 }
+
+/* Links section */
 
 .link-title, .link-address {
   flex: 45%;

@@ -12,10 +12,10 @@
 </head>
 
 <body>
-  <div class="sidenav">
+  <div class="sidenav menu">
     <span class="logo">
       <img src="images/logo.png" alt="logo">
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars hamburger"></i>
     </span>
     <a href="#"><i class="far fa-star"></i>General</a>
     <a href="#"><i class="fas fa-server"></i>Details</a>
@@ -30,9 +30,15 @@
       <img src="images/photo.png" class="photo" alt="portrait">
       <p>Mikhael E.</p>
     </div>
+    <hr class="hidden-md-up">
+    <a class="hidden-md-up" href="#"><i class="fas fa-wallet"></i>$1,500.00 <i class="fas fa-chevron-right"></i></a>
+    <a class="hidden-md-up" href="#"><i class="far fa-bell"></i>notifications</a>
+    <a class="hidden-md-up" href="#"><i class="far fa-user-circle"></i>Leonardo Dicaprio</a>
+    <a class="hidden-md-up" href="#"><i class="fas fa-sign-out-alt"></i>sing out</a>
   </div>
   <header>
     <nav class="navbar">
+      <i class="fas fa-bars hamburger nav-hamburger"></i>
       <ul>
         <li><a><i class="fas fa-wallet"></i>$1,500.00 <i class="fas fa-chevron-down"></i></a></li>
         <li><a><i class="far fa-bell"></i></a></li>
@@ -75,20 +81,6 @@
       </div>
       <div class="content">
         <h2>Earnings chart</h2>
-        <!-- <div class="row">
-          <a class="btn btn-1">
-            <i class="fas fa-circle dot-1"></i>
-            <span>Signups</span>
-          </a>
-          <a class="btn btn-1">
-            <i class="fas fa-circle dot-2"></i>
-            <span>FTD</span>
-          </a>
-          <a class="btn btn-2">
-            <i class="fas fa-circle dot-3"></i>
-            <span>Earned</span>
-          </a>
-        </div> -->
         <img src="images/graph.png" alt="graph">
       </div>
     </div>
@@ -219,6 +211,6 @@
       </div>
     </div>
   </section>
+  <script src="js/script.js"></script>
 </body>
-
 </html>
