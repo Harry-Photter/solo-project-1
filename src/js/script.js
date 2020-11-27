@@ -1,13 +1,10 @@
 'use strict';
 
+const button = document.querySelector('.hamburger');
+const sidenav = document.querySelector('.sidenav');
 
-
-document.querySelector('.hamburger, .nav-hamburger').addEventListener('click', function(e) {
-  e.preventDefault();
-  console.log('click');
-  toggleMenu();
-});
-
-function toggleMenu(visible) {
-  document.querySelector('.menu').classList.toggle('show', visible);
-}
+button.addEventListener('click',
+  function () {
+    sidenav.classList.toggle('show');
+    button.classList.toggle('show');
+  });

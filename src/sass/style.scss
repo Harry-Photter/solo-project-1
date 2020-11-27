@@ -3,6 +3,11 @@
 @import "normalize";
 @import "layout";
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 $color-dark: #191919;
 $color-light: #979797;
 $color-main: #a6a6a6;
@@ -40,11 +45,6 @@ h3 {
   font-family: $font-main;
 }
 
-span,
-p {
-  font-family: $font-main;
-}
-
 // /* Components */
 // @import "components/form_field";
 
@@ -56,6 +56,7 @@ p {
 
 body {
   background: $color-background;
+  margin: 0;
 }
 
 section {
@@ -68,22 +69,31 @@ section {
   text-align: center;
 }
 
+span,
+p {
+  font-family: $font-main;
+}
+
 hr {
   margin: 0;
   border-top: 1px solid $color-light;
 }
 
 .sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;  
   height: 100%;
   width: 188px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
   background-color: $color-dark;
-  overflow-x: hidden;
+  z-index: 2;
   padding-top: 0;
-  display: none;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+
+  &.show {
+    transform: translateX(0);
+  }
 }
 
 .logo {
@@ -91,10 +101,28 @@ hr {
   justify-content: space-between;
 }
 
-.logo i {
-  color: $color-main;
+.hamburger {
+  position: absolute;
+  padding: 14px 8px;
   font-size: 24px;
+  top: 0;
+  right: -58px;
+  z-index: auto;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: $color-main;
+  transition: transform 0.3s ease-in-out;
+
+  &.show {
+    right: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+
 }
 
 .sidenav span {
@@ -104,6 +132,7 @@ hr {
 .sidenav i {
   padding: 0 10px;
 }
+
 
 .sidenav a {
   padding: 12px;
@@ -159,14 +188,6 @@ hr {
 
 .navbar i {
   padding: 0 10px;
-}
-
-.nav-hamburger {
-  size: 1.5;
-  padding: 18px !important;
-  color: #a6a6a6;
-  font-size: 24px;
-  cursor: pointer;
 }
 
 .navbar ul {
@@ -339,12 +360,6 @@ hr {
 
 // @media (max-width:320px){}
 
-// hamburger-nav
-//display: block;
-// position: inherit;
-
-//nav ul
-//display: none;
 
 @media (min-width: 576px) {
   .hidden-md-up {
@@ -355,9 +370,6 @@ hr {
     display: block;
   }
 
-  .nav-hamburger {
-    position: absolute;
-  }
   .box {
     flex: 33%;
     padding-top: 20px;
@@ -403,10 +415,6 @@ hr {
     display: block;
   }
 
-  .nav-hamburger {
-    display: none;
-  }
-
   section {
     margin-left: 188px;
   }
@@ -417,5 +425,13 @@ hr {
 
   .navbar ul li {
     padding: 18px;
+  }
+
+  .sidenav {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: none;
   }
 }
