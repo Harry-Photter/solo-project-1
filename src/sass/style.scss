@@ -82,7 +82,7 @@ hr {
 .sidenav {
   position: fixed;
   top: 0;
-  left: 0;  
+  left: 0;
   height: 100%;
   width: 188px;
   background-color: $color-dark;
@@ -432,6 +432,28 @@ hr {
   }
 
   .hamburger {
+    display: none;
+  }
+}
+
+.overlay {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(#000, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
+  
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  @media(min-width: 1024px) {
     display: none;
   }
 }
